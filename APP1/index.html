@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Summarizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Audio Summarizer</h1>
+        </header>
+
+        <main>
+            <section id="home-section" class="active">
+                <h2>Home</h2>
+                <input type="text" id="recording-name" placeholder="Enter recording name">
+                <button id="record-button">🎤 Start Recording</button>
+                <input type="file" id="upload-file" accept="audio/*" style="display:none">
+                <label for="upload-file" id="upload-label">📂 Upload Audio</label>
+                <button id="summarize-button">📝 Summarize</button>
+            </section>
+
+            <section id="history-section">
+                <h2>History</h2>
+                <ul id="history-list">
+                    <!-- Here history of recordings will be listed -->
+                </ul>
+            </section>
+
+            <section id="settings-section">
+                <h2>Settings</h2>
+                <label for="summary-type">Summary Type:</label>
+                <select id="summary-type">
+                    <option value="concise">Concise (Key Points)</option>
+                    <option value="detailed">Detailed (More Information)</option>
+                </select>
+
+                <label for="file-format">File Format:</label>
+                <select id="file-format">
+                    <option value="word">Word</option>
+                    <option value="docs">Docs</option>
+                </select>
+
+                <label for="language">Summary Language:</label>
+                <select id="language">
+                    <option value="hebrew">Hebrew</option>
+                    <option value="english">English</option>
+                    <option value="arabic">Arabic</option>
+                </select>
+            </section>
+        </main>
+
+        <footer>
+            <button id="home-btn">🏠 Home</button>
+            <button id="history-btn">🕒 History</button>
+            <button id="settings-btn">⚙️ Settings</button>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
